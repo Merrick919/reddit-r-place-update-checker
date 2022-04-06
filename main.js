@@ -15,7 +15,6 @@ http.createServer((req, res) => {
 		res.end();
 		
 		let parsed = JSON.parse(data);
-		if (parsed.r == 0 && parsed.g == 0 && parsed.b == 0 && parsed.a == 255) {
-		}
+		console.log(`sector: ${parsed.sector}; x: ${parsed.x}; y: ${parsed.y}; colourName: ${parsed.colourName}; rgba: ${parsed.r}, ${parsed.g}, ${parsed.b}, ${parsed.a}`);
 	})
-}).listen(9009);
+}).listen(9001);
